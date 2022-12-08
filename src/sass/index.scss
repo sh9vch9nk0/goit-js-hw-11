@@ -160,18 +160,6 @@ ul {
   height: 16px;
   background-size: contain;
 }
-.info-item:first-of-type::before {
-  background-image: url('../images/icons/favicon3-16x16.png');
-}
-.info-item:nth-of-type(n + 2)::before {
-  background-image: url('../images/icons/favicon2-16x16.png');
-}
-.info-item:nth-of-type(n + 3)::before {
-  background-image: url('../images/icons/favicon-16x16.png');
-}
-.info-item:last-of-type::before {
-  background-image: url('../images/icons/icons8-downloading-updates-16.png');
-}
 .buttons-container {
   display: flex;
   justify-content: center;
