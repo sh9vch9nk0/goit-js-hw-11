@@ -9,7 +9,7 @@ export default class SearchImg {
     try {
       const response = await axios.get('https://pixabay.com/api/', {
         params: {
-          key: '31896211-af67c123f37fbd4748dd625ab',
+          key: '31392505-41b93051c6715e7012a1d9703',
           q: this.name,
           page: this.page,
           per_page: 12,
