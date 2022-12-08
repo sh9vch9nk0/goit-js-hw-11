@@ -100,6 +100,78 @@ ul {
   position: relative;
   background-color: rgba(0, 0, 0, 0);
 }
+.gallery {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  justify-content: center;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+.column {
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 4px;
+}
+@media screen and (min-width: 768px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .column {
+    flex: 30%;
+    max-width: 30%;
+    padding: 0 4px;
+  }
+}
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.photo-card__link {
+  overflow: hidden;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.info {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+  gap: 5px;
+  color: #fff;
+  background-color: #09356196;
+}
+.info-item {
+  display: inline-flex;
+  align-items: center;
+}
+.info-item::before {
+  content: '';
+  margin-right: 16px;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+}
+.info-item:first-of-type::before {
+  background-image: url('../images/icons/favicon3-16x16.png');
+}
+.info-item:nth-of-type(n + 2)::before {
+  background-image: url('../images/icons/favicon2-16x16.png');
+}
+.info-item:nth-of-type(n + 3)::before {
+  background-image: url('../images/icons/favicon-16x16.png');
+}
+.info-item:last-of-type::before {
+  background-image: url('../images/icons/icons8-downloading-updates-16.png');
+}
 .buttons-container {
   display: flex;
   justify-content: center;
