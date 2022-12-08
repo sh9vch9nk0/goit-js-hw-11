@@ -47,26 +47,3 @@
   color: #fff;
   background-color: #09356196;
 }
-.info-item {
-  display: inline-flex;
-  align-items: center;
-}
-.info-item::before {
-  content: '';
-  margin-right: 16px;
-  width: 16px;
-  height: 16px;
-  background-size: contain;
-}
-.info-item:first-of-type::before {
-  background-image: url('../images/icons/favicon3-16x16.png');
-}
-.info-item:nth-of-type(n + 2)::before {
-  background-image: url('../images/icons/favicon2-16x16.png');
-}
-.info-item:nth-of-type(n + 3)::before {
-  background-image: url('../images/icons/favicon-16x16.png');
-}
-.info-item:last-of-type::before {
-  background-image: url('../images/icons/icons8-downloading-updates-16.png');
-}
