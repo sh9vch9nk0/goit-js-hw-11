@@ -2,11 +2,18 @@
   text-align: center;
   margin: 15px;
 }
-.input-form {
+#input {
   width: 350px;
   border: 1px solid #000;
   border-radius: 5px;
   padding: 13px;
   font-size: 19px;
   box-shadow: 0 1px 1px #0000001f, 0 4px 4px #0000000f, 1px 4px 6px #00000029;
+}
+button {
+  min-width: 100px;
+  border-radius: 14px;
+  background-color: $accent-color;
+  border: 2px solid $border;
+  color: $border;
 }
