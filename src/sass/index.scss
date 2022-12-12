@@ -55,34 +55,20 @@ button {
 }
 
 img {
-  height: 100%;
   width: 100%;
+  height: 250px;
+  display: block;
   object-fit: cover;
-  transition: transform 250ms;
+}
 
-  &:hover {
-    transform: scale(1.03);
-  }
-
-  .info {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    z-index: 1;
-
-    display: flex;
-    gap: 10px;
-
-    padding-inline: 15px;
-
-    background-color: palevioletred;
-
-    transition: opacity 300ms ease-in-out;
-  }
-  .info-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
+.info {
+  display: flex;
+  justify-content: space-around;
+  border-top: none;
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
