@@ -1,17 +1,41 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
-.visually-hidden {
-  display: none;
-}
-
-* {
-  scroll-behavior: smooth;
-}
-
 body {
-  border-color: #fff7e9;
+  padding-bottom: 50px;
 }
 
-::-webkit-scrollbar {
+form {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+input,
+button {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+}
+
+input {
+  width: 300px;
+}
+
+button {
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: pink;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.load-more {
+  display: block;
+  margin: 0 auto;
+}
+
+.is-hidden {
   display: none;
 }
 
@@ -33,24 +57,25 @@ body {
   position: relative;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
-.gallery-image {
+
+.photo-card {
+  width: 350px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 250ms;
 }
-.gallery-image:hover {
+img:hover {
   transform: scale(1.03);
 }
-.gallery-link:hover {
-  cursor: zoom-in;
-}
-.gallery-link:hover + .info {
-  opacity: 0;
-}
-
-.info {
+img .info {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -58,28 +83,12 @@ body {
   display: flex;
   gap: 10px;
   padding-inline: 15px;
-  background-color: #fff7e9;
+  background-color: palevioletred;
   transition: opacity 300ms ease-in-out;
 }
-
-.search-form {
-  text-align: center;
-  margin: 15px;
-}
-
-#input {
-  width: 350px;
-  border: 1px solid #000;
-  border-radius: 5px;
-  padding: 13px;
-  font-size: 19px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1215686275), 0 4px 4px rgba(0, 0, 0, 0.0588235294), 1px 4px 6px rgba(0, 0, 0, 0.1607843137);
-}
-
-button {
-  min-width: 100px;
-  border-radius: 14px;
-  background-color: #fff7e9;
-  border: 2px solid violet;
-  color: violet;
+img .info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }/*# sourceMappingURL=index.css.map */
