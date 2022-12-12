@@ -1,4 +1,102 @@
-@import './vars';
-@import './common';
-@import './gallery';
-@import './form';
+@import '~node_modules/modern-normalize/modern-normalize.css';
+body {
+  padding-bottom: 50px;
+}
+form {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+input,
+button {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+}
+
+input {
+  width: 300px;
+}
+
+button {
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: pink;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.load-more {
+  display: block;
+  margin: 0 auto;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.gallery {
+  max-height: 100vh;
+  overflow: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-auto-rows: 240px;
+  grid-gap: 12px;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+
+  padding-block: 100px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &-div {
+    position: relative;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.photo-card {
+  width: 350px;
+  overflow: hidden;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 250ms;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  .info {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+
+    display: flex;
+    gap: 10px;
+
+    padding-inline: 15px;
+
+    background-color: $accent-color;
+
+    transition: opacity 300ms ease-in-out;
+  }
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
