@@ -31,8 +31,6 @@ async function onSearchFormSubmit(event) {
     return;
   }
 
-  searchBtn.disabled = true;
-
   try {
     const searchResult = await pixabayApi.fetchImages();
     const imagesArr = searchResult.data.hits;
