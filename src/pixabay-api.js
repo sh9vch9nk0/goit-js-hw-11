@@ -12,15 +12,16 @@ export class PixabayApi {
     this.per_page = '40';
   }
 
-  async fetchImages() {
+  async fetchPhotos() {
     try {
       const searchParams = {
         params: {
           q: this.searchQuery,
-          page: this.page,
-          per_page: this.per_page,
           image_type: 'photo',
           orientation: 'horizontal',
+          safesearch: true,
+          page: this.page,
+          per_page: '40',
           key: this.#API_KEY,
         },
       };
